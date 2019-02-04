@@ -467,7 +467,7 @@ func (r *Runner) appendSecrets(
 			continue
 		}
 
-		if !config.BoolVal(cp.NoPrefix) {
+		if config.BoolVal(cp.NoPrefix) {
 			// Replace the path slashes with an underscore.
 			pc, ok := r.configPrefixMap[d.String()]
 			if !ok {
